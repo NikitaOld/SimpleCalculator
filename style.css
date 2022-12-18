@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #2d2a24;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.75);;
+}
+
+input {
+    all: unset;
+}
+
+.container-outer{
+    background-color: #171717;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex; // centr
+}
+
+.container-inner{
+    width: 1040px;
+    height: 812px;
+    background-color: #FD8016;
+    border-radius: 25px;
+    display: flex;
+
+    margin: auto; // centr
+}
+
+.calc{
+    background-color: #EFEFEF;
+    width: 375px;
+    height: 667px;
+    border-radius: 15px;
+
+    -webkit-box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.3);
+
+    margin: auto;
+}
+
+.calc__screen{
+    height: 225px;
+    padding: 32px 25px;
+    position: relative;
+}
+
+.calc__screen p{
+    font-size: 48px;
+    position: absolute;
+    padding: inherit;
+    bottom: 0;
+    right: 0;
+}
+
+.calc__buttons{
+    padding: 0 25px;
+    display: grid;
+    /*grid-template-columns: 70px 70px 70px 70px;*/
+    column-gap: 15px;
+    row-gap: 14px;
+
+    grid-template-areas:
+            "btn_AC btn_plus-minus btn_percent btn_division"
+            "btn_seven btn_eight btn_nine btn_multiply"
+            "btn_four btn_five btn_six btn_minus"
+            "btn_one btn_two btn_three btn_plus"
+            "btn_zero btn_zero btn_dot btn_equal";
+}
+/*.calc__buttons:hover{*/
+/*    cursor: alias;*/
+/*}*/
+
+.calc__button{
+    background: linear-gradient(180deg, #EBEDF0 0%, #F2F4F6 100%);
+    display:block;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    border: 1px black;
+    padding: 18px 16px;
+    font-size: 28px;
+    -webkit-box-shadow: 12px 15px 20px -6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 12px 15px 20px -6px rgba(0, 0, 0, 0.3);
+    box-shadow: 12px 15px 20px -6px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.10s linear;
+    cursor: pointer;
+}
+
+.calc__button:hover{
+    background: rgba(220, 220, 220, 0.94);
+}
+
+.color-orange{
+    color: #FD8016;
+}
+
+.color-gray{
+    color: #757F8A;
+    opacity: 50%;
+}
+
+.calc__button.btn_zero{
+    grid-area: btn_zero;
+    width: 100%;
+}
+
+.calc__button_shadow-inner{
+    -webkit-box-shadow: 5px 5px 23px -2px rgba(0, 0, 0, 0.17) inset;
+    -moz-box-shadow: 5px 5px 23px -2px rgba(0, 0, 0, 0.17) inset;
+    box-shadow: 5px 5px 23px -2px rgba(0, 0, 0, 0.17) inset;
+}
